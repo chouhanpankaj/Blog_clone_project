@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Drafts Page</title>
+{% endblock %}
+
+{% block content %}
+    {% for post in post_list %}
+        <div class="post">
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h1>
+            <p class="date"><u>Created Date: {{post.created_date|date:'d-m-Y'}}</u></p>
+            <p><u> Posted by: {{post.author}}</u></p>
+            <p>{{post.text|safe|truncatechars:200}}</p>
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock %}
