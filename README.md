@@ -1,2 +1,2 @@
 # Blog_clone_project
-A Simple blogging website
+A Simple blogging website to post blogs. 
